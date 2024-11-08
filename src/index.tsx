@@ -1,10 +1,7 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Lesson06 from "./lessons/lesson06/Lesson06";
-import Homework03 from "./homeworks/homework03/Homework03";
+import Lesson07 from "./lessons/lesson07/Lesson07";
 
 
 const root = ReactDOM.createRoot(
@@ -12,10 +9,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <>
-    {/* <App /> */}
-    <Lesson06/>
+    {/* <Lesson06/> */}
+    <Lesson07/>
   </>
 );
 
 
-reportWebVitals();
+
+

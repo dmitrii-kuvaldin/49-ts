@@ -41,7 +41,7 @@ export default function Lesson06() {
 
   // частный случай типизации для двух элементов в массиве
   const myArray: [string, number] = ["apple", 42];
-  console.log(myArray);
+
 
   // * 6. objects
 
@@ -96,10 +96,10 @@ export default function Lesson06() {
 
   heroes.push(gendalf);
 
-  console.log(heroes);
+
 
   return (
-    <div>
+    <div className="lesson-container">
       <h2>Lesson 06</h2>
       <p>React TypeScript</p>
       <p>Самое важное на этом уроке происходит внутри компонента в теле функции и в консоли браузера ⚡️</p>
