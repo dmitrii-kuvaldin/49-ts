@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Counter from "../../components/counter/Counter";
 import MyButton from "../../components/myButton/MyButton";
+import FetchDog from "../../components/fetchDog/FetchDog";
 
 export default function Lesson08(): JSX.Element {
   console.log('render lesson08!');
@@ -40,6 +41,7 @@ export default function Lesson08(): JSX.Element {
       {toggle && (
         <Counter />
       )}
+      <FetchDog/>
     </div>
   );
 }

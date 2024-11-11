@@ -17,7 +17,7 @@ export default function Counter() {
   };
 
   // * это действие не будет срабатывать каждый раз при обновлении компонента
-  
+
   useEffect(()=> {
     console.log('render counter!')
   }, [])
