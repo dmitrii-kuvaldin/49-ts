@@ -1,31 +1,36 @@
 // импортируем картинку в переменной указав полный путь
-import reactImg from '../../assets/reactImg.jpg'
+import reactImg from '../../assets/reactImg.jpg';
 import MyButton from "../../components/myButton/MyButton";
 // подключение css файла из текущей папки
-import './lesson02.css'
+import './lesson02.css';
 // функция-компонент должна называться с большой буквы
 // имя файла тоже называется с большой буквы и совпадает с именем функции
-function Lesson02() {
+function Lesson02():JSX.Element {
   // мы можем создать переменную с версткой и положить в нее тег li
   const element = <li>Element in variable</li>;
   // или мы можем создать переменную со строкой для тега в верстке
   const text = "Text for JSX tag";
-  const company = "Facebook"
+  const company = "Facebook";
 
-  // объект с данными о пользователе
-  const user = {
-    firstName: 'Brendan',
-    lastname: 'Eich'
+  interface IUser {
+    firstName: string;
+    lastname: string;
   }
 
+  // объект с данными о пользователе
+  const user: IUser = {
+    firstName: 'Brendan',
+    lastname: 'Eich'
+  };
+
   // функция, обрабатывающая данные объекта
-  function formatUser(name) {
-    return name.firstName + ' ' + name.lastname
+  function formatUser(name: IUser) {
+    return name.firstName + ' ' + name.lastname;
   }
 
   // переменная от значения которой зависит отображение данных
   // на странице в тернарном операторе
-  const isLoggedIn = false
+  const isLoggedIn = false;
 
 
   return (
@@ -41,10 +46,10 @@ function Lesson02() {
         <li>React was created by {company}</li>
         <li>{formatUser(user)} is creator of JS</li>
         {/* пример использования тернарного оператора внутри тега */}
-        <li>User {isLoggedIn ? 'is': 'is NOT'} in the system</li>
+        <li>User {isLoggedIn ? 'is' : 'is NOT'} in the system</li>
       </ul>
       {/* импорт компонента-кнопки */}
-      <MyButton/>
+      <MyButton />
     </div>
   );
 }

@@ -1,6 +1,15 @@
-export const heroes = [
+export interface IHero {
+  id: number;
+  name: string;
+  age: number;
+  isDark: boolean;
+  image: string;
+  weapons: string[];
+}
+
+export const heroes: IHero[] = [
   {
-    id:1,
+    id: 1,
     name: "Gendalf",
     age: 3000,
     isDark: false,
@@ -8,7 +17,7 @@ export const heroes = [
     weapons: ["magic stick", "sword"]
   },
   {
-    id:2,
+    id: 2,
     name: "Saruman",
     age: 2500,
     isDark: true,
@@ -16,7 +25,7 @@ export const heroes = [
     weapons: ["magic stick", "palantir"]
   },
   {
-    id:3,
+    id: 3,
     name: "Gimli",
     age: 50,
     isDark: false,
@@ -24,7 +33,7 @@ export const heroes = [
     weapons: ["hammer", "axe"]
   },
   {
-    id:4,
+    id: 4,
     name: "Witch-king",
     age: 1500,
     isDark: true,
@@ -32,7 +41,7 @@ export const heroes = [
     weapons: ["sword", "dragon", "dark magic"]
   },
   {
-    id:5,
+    id: 5,
     name: "Aragorn",
     age: 150,
     isDark: false,
