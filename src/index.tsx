@@ -3,6 +3,7 @@ import './index.css';
 import Lesson05 from "./lessons/lesson05/Lesson05";
 import Lesson08 from "./lessons/lesson08/Lesson08";
 import FetchDog from "./components/fetchDog/FetchDog";
+import FetchFox from "./components/fetchFox/FetchFox";
 
 
 const root = ReactDOM.createRoot(
@@ -15,7 +16,8 @@ root.render(
     {/* <Lesson07 /> */}
     {/* <Lesson05 /> */}
     {/* <Lesson08/> */}
-    <FetchDog/>
+    {/* <FetchDog/> */}
+    <FetchFox/>
   </>
 );
 
