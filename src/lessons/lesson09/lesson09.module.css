@@ -6,3 +6,8 @@
 .heading {
   text-decoration: underline;
 }
+
+/* в css модулях имя класса из нескольких слов пишут в camel case */
+.boldText {
+  font-weight: bold;
+}
