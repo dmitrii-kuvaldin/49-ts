@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroCard from "../heroCard/HeroCard";
 import { IHero } from "../../lessons/lesson05/data";
+import './heroGallery.css'
 
 // типизация пропсов
 interface HeroGalleryProps {
@@ -9,6 +10,7 @@ interface HeroGalleryProps {
 
 // используем тип пропс в круглых скобках
 export default function HeroGallery({data}:HeroGalleryProps) {
+ 
   return (
     <section className="grid-container">
     {/* используем map на входящих данных */}

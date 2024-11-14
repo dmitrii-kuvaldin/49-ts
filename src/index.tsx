@@ -1,23 +1,31 @@
 import ReactDOM from 'react-dom/client';
+import { HashRouter, Route, Routes } from "react-router-dom";
+import FetchDog from "./components/fetchDog/FetchDog";
 import './index.css';
-import Lesson09 from "./lessons/lesson09/Lesson09";
-import Lesson10 from "./lessons/lesson10/Lesson10";
+import Layout from "./layout/Layout";
+import HeroGallery from "./components/heroGallery/HeroGallery";
+import { heroes } from "../src/lessons/lesson05/data";
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <>
-    {/* <Lesson06/> */}
-    {/* <Lesson04 /> */}
-    {/* <Lesson07 /> */}
-    {/* <Lesson05 /> */}
-    {/* <Lesson08/> */}
-    {/* <FetchDog/> */}
-    {/* <FetchFox/> */}
-    <Lesson10 />
-  </>
+  // импортируем HashRouter из react-router-dom и оборачиваем им все приложение
+  <HashRouter>
+    {/* импортируем компонент Routes (пути) и оборачиваем вокруг всех компонентов */}
+    <Routes>
+      {/* в корневой обертке Route указываем props: element и path */}
+      {/* в качестве корневого элемента указываем Layout */}
+      <Route path="/" element={<Layout />}>
+        {/* пути ниже будут приходить на место Outlet в Layout */}
+        <Route path="/" element={<p>Home Page 🏡</p>} />
+        <Route path="fetch-dog" element={<FetchDog />} />
+        <Route path="hero-gallery" element={<HeroGallery data={heroes} />} />
+
+      </Route>
+    </Routes>
+  </HashRouter>
 );
 
 

@@ -25,6 +25,7 @@ export default function FetchDog(): JSX.Element {
 
   // * вызов внутри useEffect случится только при начале жизненного цикла (один раз за цикл)
   useEffect(() => {
+    console.log('useEffect from fetch dog!')
     fetchDog();
   }, []);
 
