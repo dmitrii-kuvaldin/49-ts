@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MyButton from "../myButton/MyButton";
+import styles from './fetchDog.module.css';
 
 // протипизировали данные с сервера
 interface IDogData {
@@ -25,7 +26,7 @@ export default function FetchDog(): JSX.Element {
 
   // * вызов внутри useEffect случится только при начале жизненного цикла (один раз за цикл)
   useEffect(() => {
-    console.log('useEffect from fetch dog!')
+    console.log('useEffect from fetch dog!');
     fetchDog();
   }, []);
 
@@ -35,7 +36,9 @@ export default function FetchDog(): JSX.Element {
       {dogImg && (
         <>
           <h3>Fetch dog 🐶</h3>
-          <img height={200} src={dogImg} alt="" />
+          <div className={styles.imgWrapper}>
+            <img src={dogImg} alt="" />
+          </div>
           <MyButton func={fetchDog} text={'update dog'} />
         </>
       )}

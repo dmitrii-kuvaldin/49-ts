@@ -12,18 +12,18 @@ function HeroCard({ isDark, name, image, age, weapons }: IHeroCardProps) {
     <article className={isDark ? "hero-dark" : "hero-light"}>
       <h3>{name}</h3>
       <p>
-        {name} is {age} years old
+        Age: {age} years
       </p>
       <img src={image} alt="" />
       <p>
-        Hero weapons
-        {weapons.map((weapon, index) => (
-          <span className="weapon" key={index}>
-            {" "}
-            {weapon}
-          </span>
-        ))}
+        Weapons:
       </p>
+      {weapons.map((weapon, index) => (
+        <span className="weapon" key={index}>
+          {weapon}
+          {index < weapons.length - 1 && " | "}
+        </span>
+      ))}
     </article>
   );
 }

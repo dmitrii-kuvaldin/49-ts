@@ -13,7 +13,7 @@ export const heroes: IHero[] = [
     name: "Gendalf",
     age: 3000,
     isDark: false,
-    image: "https://static.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg",
+    image: "https://storage.googleapis.com/pod_public/1300/245798.jpg",
     weapons: ["magic stick", "sword"]
   },
   {
@@ -29,12 +29,12 @@ export const heroes: IHero[] = [
     name: "Gimli",
     age: 50,
     isDark: false,
-    image: "https://static.wikia.nocookie.net/lotr/images/4/43/Gimli.jpg",
+    image: "https://i.pinimg.com/originals/76/e2/a6/76e2a65d04076ad48addca209213947c.jpg",
     weapons: ["hammer", "axe"]
   },
   {
     id: 4,
-    name: "Witch-king",
+    name: "Nazgul",
     age: 1500,
     isDark: true,
     image: "https://www.blacksbricks.de/images/product_images/original_images/witchkingff5.jpg",
@@ -45,7 +45,7 @@ export const heroes: IHero[] = [
     name: "Aragorn",
     age: 150,
     isDark: false,
-    image: "https://static.wikia.nocookie.net/lotr/images/b/ba/Anduril.jpg",
+    image: "https://www.pcgames.de/screenshots/1280x/2016/03/Aragorn_HdR2-pc-games.jpg",
     weapons: ["sword"]
   }
 ];
