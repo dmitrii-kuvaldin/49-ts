@@ -17,6 +17,7 @@ import Lesson08 from "./lessons/lesson08/Lesson08";
 import Lesson09 from "./lessons/lesson09/Lesson09";
 import Lesson10 from "./lessons/lesson10/Lesson10";
 import Lesson11 from "./lessons/lesson11/Lesson11";
+import Lesson12 from "./lessons/lesson12/Lesson12";
 
 
 const root = ReactDOM.createRoot(
@@ -45,7 +46,7 @@ root.render(
         <Route path="lesson-9" element={<Lesson09 />} />
         <Route path="lesson-10" element={<Lesson10 />} />
         <Route path="lesson-11" element={<Lesson11 />} />
-        {/* <Route path="lesson-3" element={<Lesson03 />} /> */}
+        <Route path="lesson-12" element={<Lesson12 />} />
       </Route>
     </Routes>
   </HashRouter>

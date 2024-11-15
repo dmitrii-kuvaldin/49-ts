@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from "react-router-dom";
-import styles from './homePage.module.css'
+import styles from './homePage.module.css';
 
 export default function HomePage() {
   return (
@@ -17,8 +16,8 @@ export default function HomePage() {
       <Link to='lesson-9'><div>Lesson 9</div></Link>
       <Link to='lesson-10'><div>Lesson 10</div></Link>
       <Link to='lesson-11'><div>Lesson 11</div></Link>
-      {/* <Link to='lesson-3'><div>Lesson 3</div></Link> */}
+      <Link to='lesson-12'><div>Lesson 12</div></Link>
     </div>
-  )
+  );
 }
 
