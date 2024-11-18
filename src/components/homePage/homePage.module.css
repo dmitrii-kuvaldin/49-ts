@@ -20,6 +20,14 @@
   color: white;
 }
 
+.homework {
+  background-color: rgb(242, 177, 73) !important;
+}
+
 .gridLessonContainer div:hover {
   background-color: rgb(196, 188, 255);
+}
+
+.homework:hover {
+  background-color: rgb(242, 207, 151) !important;
 }

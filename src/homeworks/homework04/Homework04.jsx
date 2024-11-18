@@ -1,4 +1,4 @@
-import Feedback from "../../components/feedback/feedback/Feedback";
+import Feedback from "../../components/feedback/Feedback";
 
 function Homework04() {
   // console.log('render homework 4!')

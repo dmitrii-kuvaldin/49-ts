@@ -4,6 +4,9 @@ import styles from './homePage.module.css';
 export default function HomePage() {
   return (
     <div className={styles.gridLessonContainer}>
+      <Link to='homework-3'><div className={styles.homework}>Homework 3</div></Link>
+      <Link to='homework-4'><div className={styles.homework}>Homework 4</div></Link>
+      <Link to='homework-12'><div className={styles.homework}>Homework 12</div></Link>
       {/* <p>Home Page 🏡</p> */}
       <Link to='lesson-1'><div>Lesson 1</div></Link>
       <Link to='lesson-2'><div>Lesson 2</div></Link>

@@ -18,6 +18,9 @@ import Lesson09 from "./lessons/lesson09/Lesson09";
 import Lesson10 from "./lessons/lesson10/Lesson10";
 import Lesson11 from "./lessons/lesson11/Lesson11";
 import Lesson12 from "./lessons/lesson12/Lesson12";
+import Homework03 from "./homeworks/homework03/Homework03";
+import Homework04 from "./homeworks/homework04/Homework04";
+import Homework12 from "./homeworks/homework12/Homework12";
 
 
 const root = ReactDOM.createRoot(
@@ -25,7 +28,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   // импортируем HashRouter из react-router-dom и оборачиваем им все приложение
-  <HashRouter>
+  <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     {/* импортируем компонент Routes (пути) и оборачиваем вокруг всех компонентов */}
     <Routes>
       {/* в корневой обертке Route указываем props: element и path */}
@@ -47,6 +50,9 @@ root.render(
         <Route path="lesson-10" element={<Lesson10 />} />
         <Route path="lesson-11" element={<Lesson11 />} />
         <Route path="lesson-12" element={<Lesson12 />} />
+        <Route path="homework-3" element={<Homework03 />} />
+        <Route path="homework-4" element={<Homework04 />} />
+        <Route path="homework-12" element={<Homework12 />} />
       </Route>
     </Routes>
   </HashRouter>

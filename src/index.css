@@ -41,9 +41,11 @@ li {
   margin-top: 20px;
 }
 
-.lesson-container > h2 {
-  margin-bottom: 14px;
+.lesson-container > h2,li {
+  margin-bottom: 8px;
 }
+
+
 
 .task-container {
   width: 80%;

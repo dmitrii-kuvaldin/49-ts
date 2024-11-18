@@ -9,7 +9,7 @@ interface IMyButtonProps {
 }
 
 const handleDefaultClick = () => {
-  console.log("default click!");
+  
 };
 
 function MyButton({
