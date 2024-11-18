@@ -47,6 +47,10 @@ export default function Lesson13() {
       creator: '',
       email: ''
     } as IFormValues,
+    // отключаем валидацию по изменениям в input
+    validateOnChange:false,
+    // подключаем схему валидации к форме
+    validationSchema: schema,
     onSubmit: (values: IFormValues, { resetForm }) => {
       console.log(values);
       resetForm();
@@ -63,6 +67,9 @@ export default function Lesson13() {
         <input value={formik.values.email} onChange={formik.handleChange} name="email" type="text" placeholder="company email" />
         <MyButton myType="submit" text="send" />
       </form>
+      <span className={styles.error}>{formik.errors.model}</span>
+      <span className={styles.error}>{formik.errors.creator}</span>
+      <span className={styles.error}>{formik.errors.email}</span>
     </div>
   );
 }
