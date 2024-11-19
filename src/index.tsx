@@ -23,6 +23,7 @@ import Homework04 from "./homeworks/homework04/Homework04";
 import Homework12 from "./homeworks/homework12/Homework12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import GenderForm from "./components/genderForm/GenderForm";
+import Lesson14 from "./lessons/lesson14/Lesson14";
 
 
 const root = ReactDOM.createRoot(
@@ -54,6 +55,7 @@ root.render(
         <Route path="lesson-11" element={<Lesson11 />} />
         <Route path="lesson-12" element={<Lesson12 />} />
         <Route path="lesson-13" element={<Lesson13 />} />
+        <Route path="lesson-14" element={<Lesson14 />} />
         <Route path="homework-3" element={<Homework03 />} />
         <Route path="homework-4" element={<Homework04 />} />
         <Route path="homework-12" element={<Homework12 />} />
