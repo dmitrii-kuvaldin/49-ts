@@ -1,7 +1,9 @@
 .genderForm {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .genderForm>input {
@@ -18,4 +20,13 @@
 
 .genderForm>button:hover {
   background-color: rgb(241, 195, 241);
+}
+
+.error {
+  background-color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  color: rgb(255, 255, 255);
 }
