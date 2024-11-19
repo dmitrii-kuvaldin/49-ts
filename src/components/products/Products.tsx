@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { IProduct } from "../../types/types";
 import styles from './products.module.css';
+import { Link } from "react-router-dom";
 
 
 export default function Products() {
@@ -27,6 +28,7 @@ export default function Products() {
             <div className={styles.imgWrapper}>
               <img src={el.image} alt="" />
             </div>
+            <Link to={String(el.id)}>To product</Link>
           </div>
         ))}
       </div>
