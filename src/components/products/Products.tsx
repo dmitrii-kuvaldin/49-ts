@@ -5,6 +5,7 @@ import { IProduct } from "../../types/types";
 import styles from './products.module.css';
 import MyButton from "../myButton/MyButton";
 import ShopProduct from "../shopProduct/ShopProduct";
+import Cart from "../cart/Cart";
 
 
 export default function Products() {
@@ -24,6 +25,7 @@ export default function Products() {
 
   return (
     <div>
+      <Cart/>
       <div className={styles.shopContainer}>
         {products.map(el => (
          <ShopProduct key={el.id} price={el.price} id={el.id} title={el.title} image={el.image} />

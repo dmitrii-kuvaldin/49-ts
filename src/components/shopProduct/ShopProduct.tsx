@@ -12,7 +12,7 @@ interface IShopProductProps {
 
 export default function ShopProduct({ id, title, image, price }: IShopProductProps) {
   // мы обращаемся к контексту корзины и забираем функцию добавления
-  const { addToCart, cart } = useCart();
+  const { addToCart } = useCart();
 
   // передаем в корзину объект с данными по продукту
   const addToCartFromProduct = () => {
