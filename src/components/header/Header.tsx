@@ -6,6 +6,7 @@ import { useCart } from "../../context/cartContext";
 
 
 export default function Header() {
+  // ! мы получем данные из контекста обращаясь к нему и получаем данные через деструктуризацию
   const { cart } = useCart();
 
   const calculateCartPrice = () => {

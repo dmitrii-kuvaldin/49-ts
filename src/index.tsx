@@ -35,7 +35,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  // импортируем HashRouter из react-router-dom и оборачиваем им все приложение
+  // ! импортируем HashRouter из react-router-dom и оборачиваем им все приложение
   <CartProvider>
     <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       {/* импортируем компонент Routes (пути) и оборачиваем вокруг всех компонентов */}
