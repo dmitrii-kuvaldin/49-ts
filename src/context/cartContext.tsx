@@ -16,14 +16,15 @@ interface ICartContextType {
   clearCart: () => void;
 }
 
-// создаем контекст
+// * 1. создаем контекст
 export const CartContext = createContext<ICartContextType | undefined>(undefined);
 
-// обертка для компонентов с использованием контекста
-export const CartProvider = () => {
+// * 2.  обертка для компонентов с использованием контекста
+export const CartProvider = ({children}: {children: React.ReactNode}) => {
   // стейт для корзины
   const [cart, setCart] = useState<ICartItem[]>([]);
 
+  // добавление товара в корзину
   const addToCart = (product: ICartItem) => {
     setCart(prevCart => {
       // проверяем есть ли такой продукт в корзине
@@ -37,9 +38,22 @@ export const CartProvider = () => {
     });
   };
 
-  return (
-    <div>
+  // удаление товара из корзины
+  const removeFromCart = (id: number) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== id))
+  }
 
-    </div>
+  // очистка корзины
+  const clearCart = () => {
+    setCart([])
+  }
+
+
+  return (
+    <CartContext.Provider value={{cart, addToCart, removeFromCart, clearCart}}>
+      {/* за место children придут обернутые в provider компоненты */}
+      {children}
+    </CartContext.Provider>
   );
 };
+
