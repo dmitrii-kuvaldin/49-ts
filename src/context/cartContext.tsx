@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 // типизируем элемент корзины
 interface ICartItem {
@@ -56,4 +56,14 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
     </CartContext.Provider>
   );
 };
+
+// хук сделанный нашими руками для работы с контекстом корзины
+// имеет внутри проверку на undefined
+export const useCart = () => {
+  const context = useContext(CartContext)
+  if (!context) {
+    throw new Error('no such context! 😵')
+  }
+  return context;
+}
 
