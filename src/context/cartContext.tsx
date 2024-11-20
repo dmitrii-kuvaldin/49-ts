@@ -59,6 +59,8 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
 
 // хук сделанный нашими руками для работы с контекстом корзины
 // имеет внутри проверку на undefined
+// использует useContext из react в который мы передаем нужный нам контекст для получения его данных в ответе для использования
+
 export const useCart = () => {
   const context = useContext(CartContext)
   if (!context) {

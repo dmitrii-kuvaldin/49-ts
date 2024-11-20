@@ -28,6 +28,7 @@ import Lesson11 from "./lessons/lesson11/Lesson11";
 import Lesson12 from "./lessons/lesson12/Lesson12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Lesson14 from "./lessons/lesson14/Lesson14";
+import Cart from "./components/cart/Cart";
 
 
 const root = ReactDOM.createRoot(
@@ -48,6 +49,7 @@ root.render(
           <Route path="hero-gallery" element={<HeroGallery data={heroes} />} />
           <Route path="gender-form" element={<GenderForm />} />
           <Route path="products" element={<Products />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="products/:id" element={<ProductPage />} />
           <Route path="lesson-1" element={<Lesson01 />} />
           <Route path="lesson-2" element={<Lesson02 />} />
