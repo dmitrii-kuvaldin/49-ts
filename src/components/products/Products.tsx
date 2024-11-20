@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
+import { useCart } from "../../context/cartContext";
 import { IProduct } from "../../types/types";
 import styles from './products.module.css';
-import { Link } from "react-router-dom";
+import MyButton from "../myButton/MyButton";
+import ShopProduct from "../shopProduct/ShopProduct";
 
 
 export default function Products() {
   const [products, setProducts] = useState<IProduct[]>([]);
+
 
   // * асинхронный запрос на сервер
   const getProducts = async () => {
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
     setProducts(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -23,13 +26,7 @@ export default function Products() {
     <div>
       <div className={styles.shopContainer}>
         {products.map(el => (
-          <div className={styles.shopContainerCard} key={el.id}>
-            <h3>{el.title}</h3>
-            <div className={styles.imgWrapper}>
-              <img src={el.image} alt="" />
-            </div>
-            <Link to={String(el.id)}>To product</Link>
-          </div>
+         <ShopProduct key={el.id} price={el.price} id={el.id} title={el.title} image={el.image} />
         ))}
       </div>
     </div>
