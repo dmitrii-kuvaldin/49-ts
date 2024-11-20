@@ -25,6 +25,8 @@ import Lesson13 from "./lessons/lesson13/Lesson13";
 import GenderForm from "./components/genderForm/GenderForm";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
+import Products from "./components/products/Products";
+import NoPage from "./components/noPage/NoPage";
 
 
 const root = ReactDOM.createRoot(
@@ -43,6 +45,8 @@ root.render(
         <Route path="fetch-dog" element={<FetchDog />} />
         <Route path="hero-gallery" element={<HeroGallery data={heroes} />} />
         <Route path="gender-form" element={<GenderForm />} />
+        <Route path="products" element={<Products />} />
+        <Route path="products/:id" element={<ProductPage />} />
         <Route path="lesson-1" element={<Lesson01 />} />
         <Route path="lesson-2" element={<Lesson02 />} />
         <Route path="lesson-3" element={<Lesson03 />} />
@@ -57,10 +61,10 @@ root.render(
         <Route path="lesson-12" element={<Lesson12 />} />
         <Route path="lesson-13" element={<Lesson13 />} />
         <Route path="lesson-14" element={<Lesson14 />} />
-        <Route path="lesson-14/:id" element={<ProductPage />} />
         <Route path="homework-3" element={<Homework03 />} />
         <Route path="homework-4" element={<Homework04 />} />
         <Route path="homework-12" element={<Homework12 />} />
+        <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
   </HashRouter>
