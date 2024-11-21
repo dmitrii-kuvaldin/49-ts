@@ -20,4 +20,5 @@
    - Для стилизации компонентов `Store.tsx`, `StoreCard.tsx`, `StorePage.tsx` используйте CSS модули.
 
 
+
 Удачи! ⚡️
