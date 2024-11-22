@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { heroes } from "../src/lessons/lesson05/data";
+import Cart from "./components/cart/Cart";
 import FetchDog from "./components/fetchDog/FetchDog";
 import GenderForm from "./components/genderForm/GenderForm";
 import HeroGallery from "./components/heroGallery/HeroGallery";
@@ -8,6 +9,7 @@ import HomePage from "./components/homePage/HomePage";
 import NoPage from "./components/noPage/NoPage";
 import ProductPage from "./components/productPage/ProductPage";
 import Products from "./components/products/Products";
+import Store from "./components/store/Store";
 import { CartProvider } from "./context/cartContext";
 import Homework03 from "./homeworks/homework03/Homework03";
 import Homework04 from "./homeworks/homework04/Homework04";
@@ -28,7 +30,6 @@ import Lesson11 from "./lessons/lesson11/Lesson11";
 import Lesson12 from "./lessons/lesson12/Lesson12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Lesson14 from "./lessons/lesson14/Lesson14";
-import Cart from "./components/cart/Cart";
 
 
 const root = ReactDOM.createRoot(
@@ -49,8 +50,9 @@ root.render(
           <Route path="hero-gallery" element={<HeroGallery data={heroes} />} />
           <Route path="gender-form" element={<GenderForm />} />
           <Route path="products" element={<Products />} />
-          <Route path="cart" element={<Cart />} />
           <Route path="products/:id" element={<ProductPage />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="store" element={<Store />} />
           <Route path="lesson-1" element={<Lesson01 />} />
           <Route path="lesson-2" element={<Lesson02 />} />
           <Route path="lesson-3" element={<Lesson03 />} />
