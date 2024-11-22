@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { IStoreProduct } from "../../types/types";
+import StoreCard from "../storeCard/StoreCard";
+import styles from './store.module.css'
 
 export default function Store() {
   // * переменная состояния для данных с сервера
@@ -19,11 +21,11 @@ export default function Store() {
 
   return (
     <div className="lesson-container">
-      <h2>Store 🛍️</h2>
-      <div>
+      {/* <h2>Store 🛍️</h2> */}
+      <div className={styles.storeGrid}>
         {/* выводим данные на странице */}
         {storeProducts.map(product => (
-          <p key={product.id}>{product.title}</p>
+          <StoreCard key={product.id} id={product.id} title={product.title} price={product.price} images={product.images} thumbnail={product.thumbnail} />
         ))}
       </div>
     </div>

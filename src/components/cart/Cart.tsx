@@ -5,7 +5,6 @@ export default function Cart() {
   // забираете данные из контекста
   const { cart, removeFromCart, clearCart } = useCart();
 
-  console.log(cart);
   return (
     <div className="lesson-container">
       <h2>Shopping cart</h2>

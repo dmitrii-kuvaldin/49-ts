@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useCart } from "../../context/cartContext";
 import { IProduct } from "../../types/types";
 import Cart from "../cart/Cart";
 import ShopProduct from "../shopProduct/ShopProduct";
 import styles from './products.module.css';
-import { useCart } from "../../context/cartContext";
 
 
 export default function Products() {
@@ -27,12 +27,7 @@ export default function Products() {
       <Cart />
       <div className={styles.shopContainer}>
         {products.map(el => (
-          <>
-            <div>
-              <ShopProduct key={el.id} price={el.price} id={el.id} title={el.title} image={el.image} />
-              <button onClick={()=> addToCart({id: el.id, title: el.title, price:el.price, quantity:1})}>добавить</button>
-            </div>
-          </>
+          <ShopProduct key={el.id} price={el.price} id={el.id} title={el.title} image={el.image} />
         ))}
       </div>
     </div>
