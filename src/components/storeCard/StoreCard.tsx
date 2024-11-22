@@ -9,18 +9,20 @@ interface IStoreCardProps {
   thumbnail: string;
 }
 
-export default function StoreCard({id, price, title, images, thumbnail}:IStoreCardProps) {
+export default function StoreCard({ id, price, title, images, thumbnail }: IStoreCardProps) {
   return (
-    <section>
-      <h4>{title}</h4>
-      <p>Price: {price.toFixed()}€</p>
-      <div>
-        <img src={thumbnail} alt="thumbnail" />
-      </div>
-      <Link to={String(id)}> <MyButton isDanger={false} text="more info"/></Link>
+    <Link to={String(id)}>
+      <section>
+        <h4>{title}</h4>
+        <p>Price: {price.toFixed()}€</p>
+        <div>
+          <img src={thumbnail} alt="thumbnail" />
+        </div>
+        <Link to={String(id)}> <MyButton isDanger={false} text="more info" /></Link>
 
 
-    </section>
+      </section>
+    </Link>
   );
 }
 

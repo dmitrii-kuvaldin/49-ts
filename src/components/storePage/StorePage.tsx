@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { IStoreProduct } from "../../types/types";
+import styles from './storePage.module.css'
 
 const initialState: IStoreProduct = {
   id: 0,
@@ -53,16 +54,21 @@ export default function StorePage() {
 
 
   return (
-    <div className="lesson-container">
+    <div className={styles.productPage}>
       {/* ! в тернарном операторе проверяем приходят ли данные по продуктам и если нет сообщаем пользователю что данные не пришли */}
       {storeProduct.images ?
         //  если данные пришли мы их выводим
         <>
           <h2>{storeProduct.title}</h2>
+          <img width={'300px'} src={storeProduct.images[0]} alt="" />
           <p>{storeProduct.description}</p>
-          {storeProduct.images.map((image, index) => (
-            <img key={index} width={200} src={image} alt="" />
-          ))}
+          <p>Price: {storeProduct.price.toFixed()}€</p>
+          <div>
+            {storeProduct.images.map((image, index) => (
+              <img key={index} width={150} src={image} alt="" />
+            ))}
+
+          </div>
         </>
         :
         // если данных нет сообщаем пользователю
