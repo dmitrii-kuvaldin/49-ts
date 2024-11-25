@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import MyButton from "../myButton/MyButton";
 
 interface IStoreCardProps {
   id: number;
@@ -18,7 +17,7 @@ export default function StoreCard({ id, price, title, images, thumbnail }: IStor
         <div>
           <img src={thumbnail} alt="thumbnail" />
         </div>
-        <Link to={String(id)}> <MyButton isDanger={false} text="more info" /></Link>
+        {/* <Link to={String(id)}> <MyButton isDanger={false} text="more info" /></Link> */}
 
 
       </section>
