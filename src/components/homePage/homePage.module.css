@@ -1,4 +1,5 @@
 .gridLessonContainer {
+  width: 100%;
   margin: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
